@@ -1,0 +1,33 @@
+@import './../../assets/styles/_fonts.scss';
+@import './../../assets/styles/_colors.scss';
+
+:host {
+  width: 240px;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .field {
+    @include font(12px, medium, 15px, -0.25);
+    color: $secondary-dark-1;
+  }
+
+  .input {
+    @include font(12px, bold, 15px, -0.25);
+    width: 240px;
+    height: 48px;
+    border: 1px solid $secondary-light-1;
+    border-radius: 4px;
+    caret-color: $primary-light-1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $primary-light-2;
+    }
+  }
+}
